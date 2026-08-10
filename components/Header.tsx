@@ -46,10 +46,11 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header
-      className="site-header"
-      style={shadow ? { boxShadow: "0 10px 30px -20px rgba(0,0,0,.6)" } : undefined}
-    >
+    <>
+      <header
+        className="site-header"
+        style={shadow ? { boxShadow: "0 10px 30px -20px rgba(0,0,0,.6)" } : undefined}
+      >
       <div className="container nav">
         <Link href="/" className="brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -111,8 +112,9 @@ export default function Header() {
           <IconBurger />
         </button>
       </div>
+    </header>
 
-      <nav className={`mobile-panel${open ? " open" : ""}`}>
+    <nav className={`mobile-panel${open ? " open" : ""}`}>
         <Link href="/" onClick={() => setOpen(false)}>
           Home
         </Link>
@@ -145,6 +147,6 @@ export default function Header() {
           <IconWhatsApp /> Chat on WhatsApp
         </a>
       </nav>
-    </header>
+    </>
   );
 }
