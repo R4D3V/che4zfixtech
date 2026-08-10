@@ -1,10 +1,31 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------
+   Tailwind v4 design tokens (expose the palette to utilities)
+   -------------------------------------------------------------- */
+@theme {
+  --color-void: #080b14;
+  --color-panel: #10152a;
+  --color-panel-2: #151b34;
+  --color-line: #232a4a;
+  --color-blue-deep: #142a8f;
+  --color-blue: #2f5bff;
+  --color-blue-bright: #5b8bff;
+  --color-orange: #ff7a29;
+  --color-orange-2: #ffb066;
+  --color-text: #f3f5fb;
+  --color-text-muted: #97a1c4;
+  --color-text-dim: #5c6690;
+  --color-ok: #35d399;
+  --breakpoint-mobile: 640px;
+  --breakpoint-tablet: 980px;
+}
+
 /* ============================================================
    CHE4ZFIXTECH — Design System
    Palette: void navy + electric blue + signal orange
    Display: Space Grotesk / Body: Inter / Utility: JetBrains Mono
    ============================================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root{
   --void:        #080b14;
@@ -407,6 +428,8 @@ section{position:relative;padding:88px 0}
 .grid-2{grid-template-columns:repeat(2,1fr)}
 
 .card{
+  display:block;
+  height:100%;
   background:linear-gradient(180deg, var(--panel), var(--panel-2));
   border:1px solid var(--line);
   border-radius:var(--radius);
