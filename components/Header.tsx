@@ -100,9 +100,6 @@ export default function Header() {
           <span className="nav-phone">
             <IconPhone /> {SITE.phone}
           </span>
-          <a className="btn btn-primary" href={SITE.whatsappUrl} target="_blank" rel="noopener">
-            <IconWhatsApp /> WhatsApp Us
-          </a>
         </div>
 
         <button
